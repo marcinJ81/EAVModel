@@ -1,3 +1,6 @@
+using DB.MetadaDataRepo;
+using System.Runtime;
+
 namespace EAV_model
 {
     public class Program
@@ -5,11 +8,15 @@ namespace EAV_model
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
+            var connectionString = builder.Configuration.GetSection("DBConstring:ConnectionString").Value;
+          
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
+
+            builder.Services.AddScoped<MetadataRepository>(provider => new MetadataRepository(connectionString));
+
+            // Add services to the container.
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())

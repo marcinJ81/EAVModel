@@ -10,8 +10,9 @@ namespace DB.MetadaDataRepo
     public class MetadataRepository
     {
         private readonly string _connectionString;
+     
 
-        public MetadataRepository()
+        public MetadataRepository(string constring)
         {
             _connectionString = "Server=DESKTOP-NHJBSQV\\SQLEXPRESS;Database=EAV_DB;User Id=sa;Password=root;";
         }
