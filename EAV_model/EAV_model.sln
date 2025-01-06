@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EAV_model", "EAV_model.csproj", "{2110B905-9EAB-45A6-8A05-F03F30D06843}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EAV_model", "EAV_model.csproj", "{2110B905-9EAB-45A6-8A05-F03F30D06843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "..\DB\DB.csproj", "{C2198D01-E1CD-45B6-830E-7B0A5BBBABED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DB", "..\DB\DB.csproj", "{C2198D01-E1CD-45B6-830E-7B0A5BBBABED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Readme", "Readme", "{1FA76A90-EDE6-4E51-B819-088A7311615D}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
