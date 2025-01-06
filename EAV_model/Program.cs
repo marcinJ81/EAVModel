@@ -8,13 +8,12 @@ namespace EAV_model
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetSection("DBConstring:ConnectionString").Value;
-          
+            
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
 
-            builder.Services.AddScoped<MetadataRepository>(provider => new MetadataRepository(connectionString));
+            builder.Services.AddScoped<MetadataRepository>();
 
             // Add services to the container.
 

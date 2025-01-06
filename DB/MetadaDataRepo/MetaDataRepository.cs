@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -10,11 +11,12 @@ namespace DB.MetadaDataRepo
     public class MetadataRepository
     {
         private readonly string _connectionString;
-     
 
-        public MetadataRepository(string constring)
+        public MetadataRepository(IConfiguration configuration)
         {
-            _connectionString = "Server=DESKTOP-NHJBSQV\\SQLEXPRESS;Database=EAV_DB;User Id=sa;Password=root;";
+            //_connectionString = "Server=DESKTOP-NHJBSQV\\SQLEXPRESS;Database=EAV_DB;User Id=sa;Password=root;";
+            //_connectionString = configuration.GetSection("DBConstring:ConnectionString").Value;
+            _connectionString = configuration.GetConnectionString("Local");
         }
 
         // Pobieranie danych
