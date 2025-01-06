@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DB.AttributeValue
+namespace DB.AttributeDateTimeRepo
 {
-    public class AttributeValueInt : BaseAttributes
+    public class AttributeDateTime : BaseAttributes
     {
-        public int Value { get; set; }
+        public DateTime Value { get; set; }
     }
 }
